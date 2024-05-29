@@ -1,0 +1,287 @@
+:root {
+	--primary: #3029d9;
+	---primary-dark: #111849;
+	--white: #ffffff;
+	--grainall: #4244f5;
+	--grey: #f3f3f3;
+	--purple-light: #f8f7ff;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+	padding-top: 34px;
+	font-weight: 400;
+	line-height: 1.5rem;
+	text-align: left;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 4.5rem;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	line-height: 46px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 2.875rem;
+}
+
+h4 {
+	font-size: 1.75rem;
+	font-weight: 600;
+	line-height: 2.875rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2.125rem;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+		letter-spacing: 1px;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		line-height: 1.3rem;
+	}
+}
+
+.color-grainall {
+	color: var(--grainall);
+}
+
+.bg-color-primary {
+	background-color: var(--primary);
+	color: white;
+}
+
+.border-color-primary {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+.primary-section {
+	margin-top: -60px;
+}
+
+.logo-height {
+	height: 10;
+}
+
+.features-section,
+.use-cases-section,
+.start-now-section,
+.faq-section,
+.more-questions-section,
+.contact-us-section {
+	margin-bottom: 5rem;
+}
+
+.use-cases-section {
+	background-color: var(--purple-light);
+	padding: 4rem 0;
+}
+
+.start-now {
+	.text {
+		color: var(--primary);
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 4.25rem;
+		text-align: left;
+	}
+	.title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		line-height: 3.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.start-now {
+		.text {
+			font-size: 1.1rem;
+			font-weight: 600;
+			line-height: 2rem;
+			text-align: left;
+		}
+		.title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			line-height: 3rem;
+		}
+	}
+}
+
+.gradient {
+	background: radial-gradient(50% 50% at 50% 50%, var(--grey) 0%, #fafafa 100%);
+}
+
+.bottom-border-primary {
+	color: var(--grainall);
+	text-decoration: underline;
+	text-decoration-thickness: 1px; /* Thickness of the underline */
+	text-underline-offset: 5px; /* Space between text and underline */
+}
+
+.navbar-nav .nav-link.active {
+	font-weight: 700;
+	color: var(--grainall) !important;
+}
+
+.navbar-nav .nav-link {
+	position: relative;
+	padding-bottom: 10px; /* Adjust padding to create space for the border */
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-nav .nav-link.active::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 50%;
+		height: 2px; /* Adjust the height for the border thickness */
+		background-color: var(--grainall); /* Change to your desired color */
+	}
+
+	.navbar-nav .nav-link:hover::after {
+		background-color: var(--grainall); /* Change to your desired hover color */
+	}
+}
+
+.custom-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	background-color: var(--grainall);
+	color: white;
+	border: none;
+	border-radius: 50px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.custom-btn .icon-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	background-color: #4caf50;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+.custom-btn .icon-container i {
+	color: white;
+}
+
+.custom-btn:hover {
+	background-color: #2a3dbf;
+}
+
+.dark-card {
+	background-color: var(---primary-dark);
+	border-radius: 24px;
+	color: white;
+	padding: 2rem;
+}
+
+.grey-card {
+	background-color: var(--grey);
+	border-radius: 24px;
+	padding: 2rem;
+}
+
+.dark-card img,
+.grey-card img {
+	margin-bottom: 2rem;
+	width: 80px;
+	height: 80px;
+}
+
+.use-cases-section img {
+	margin-bottom: 1rem;
+}
+
+/* Hide the default Bootstrap icon */
+.accordion-button::after {
+	content: none;
+}
+
+.accordion-button .fas {
+	transition: transform 0.2s ease;
+}
+
+.accordion-button.collapsed .fas {
+	transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed) .fas {
+	transform: rotate(90deg);
+}
+
+/* Remove focus and hover effects */
+.accordion-button:focus,
+.accordion-button:hover {
+	/* box-shadow: none; */
+	/* outline: none; */
+	background: none;
+}
+
+.custom-accordion {
+	max-width: 950px;
+	width: 100%;
+	margin: auto;
+}
+
+.contact-us-section {
+	padding: 8rem 0;
+	background-color: #171725;
+	color: white;
+}
+
+.light-text {
+	color: #a0abb8;
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
