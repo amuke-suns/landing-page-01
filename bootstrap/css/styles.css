@@ -156,17 +156,36 @@ h5 {
 	text-underline-offset: 5px; /* Space between text and underline */
 }
 
+.navbar-nav .nav-link {
+	position: relative;
+	padding-left: 10px; /* Adjust padding to create space for the border */
+}
+
 .navbar-nav .nav-link.active {
 	font-weight: 700;
 	color: var(--grainall) !important;
 }
 
-.navbar-nav .nav-link {
-	position: relative;
-	padding-bottom: 10px; /* Adjust padding to create space for the border */
+.navbar-nav .nav-link.active::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 50%; /* Adjust the height for the border thickness */
+	background-color: var(--grainall); /* Change to your desired color */
 }
 
-@media screen and (min-width: 768px) {
+.navbar-nav .nav-link:hover::after {
+	background-color: var(--grainall); /* Change to your desired hover color */
+}
+
+@media screen and (min-width: 992px) {
+	.navbar-nav .nav-link {
+		position: relative;
+		padding-bottom: 10px; /* Adjust padding to create space for the border */
+	}
+
 	.navbar-nav .nav-link.active::after {
 		content: "";
 		position: absolute;
