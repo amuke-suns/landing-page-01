@@ -87,9 +87,15 @@ h5 {
 	color: white;
 }
 
-.border-color-primary {
+.border-color-primary-btn {
 	border-color: var(--primary);
 	color: var(--primary);
+	font-weight: 500;
+}
+
+.border-color-primary-btn:hover {
+	background-color: var(--grainall);
+	color: white;
 }
 
 .primary-section {
@@ -209,7 +215,7 @@ footer {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 10px 20px;
+	padding: 5px 20px;
 	background-color: var(--grainall);
 	color: white;
 	border: none;
