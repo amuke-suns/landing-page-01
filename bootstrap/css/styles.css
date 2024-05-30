@@ -105,8 +105,9 @@ h5 {
 .start-now-section,
 .faq-section,
 .more-questions-section,
-.contact-us-section {
-	margin-bottom: 5rem;
+.contact-us-section,
+footer {
+	margin-top: 5rem;
 }
 
 .use-cases-section {
@@ -171,9 +172,10 @@ h5 {
 	position: absolute;
 	left: 0;
 	transform: translateX(-50%);
-	width: 2px;
+	width: 5px;
 	height: 50%; /* Adjust the height for the border thickness */
 	background-color: var(--grainall); /* Change to your desired color */
+	border-radius: 10px 0 10px 0;
 }
 
 .navbar-nav .nav-link:hover::after {
@@ -193,8 +195,9 @@ h5 {
 		left: 50%;
 		transform: translateX(-50%);
 		width: 50%;
-		height: 2px; /* Adjust the height for the border thickness */
+		height: 5px; /* Adjust the height for the border thickness */
 		background-color: var(--grainall); /* Change to your desired color */
+		border-radius: 10px 0 10px 0;
 	}
 
 	.navbar-nav .nav-link:hover::after {
