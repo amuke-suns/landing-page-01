@@ -106,12 +106,7 @@ h5 {
 	height: 10;
 }
 
-.features-section,
-.use-cases-section,
-.start-now-section,
-.faq-section,
-.more-questions-section,
-.contact-us-section,
+section,
 footer {
 	margin-top: 5rem;
 }
@@ -258,6 +253,18 @@ footer {
 	padding: 2rem;
 }
 
+.light-purple-card {
+	background-color: #f8f7ff;
+	border-radius: 24px;
+	padding: 2rem;
+}
+
+.light-brown-card {
+	background-color: #eee9e2;
+	border-radius: 24px;
+	padding: 2rem;
+}
+
 .dark-card img,
 .grey-card img {
 	margin-bottom: 2rem;
@@ -312,4 +319,44 @@ footer {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 21px;
+}
+
+.toggle-switch {
+	align-items: center;
+	background-color: #e0e0e0;
+	border-radius: 25px;
+}
+
+.toggle-switch .option {
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.toggle-switch .active {
+	background-color: var(--primary);
+	color: white;
+	box-shadow: 0px 5px 7px 0px #5243c23b;
+}
+
+.pricing-section ol li {
+	border-bottom: 0.5px solid black;
+	padding-bottom: 0.5rem;
+}
+
+.transition {
+	transition: opacity 0.5s ease-in-out;
+}
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+	overflow: hidden;
+}
+
+.visible {
+	opacity: 1;
+	height: auto;
 }
