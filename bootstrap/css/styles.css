@@ -18,6 +18,11 @@ body {
 	text-align: left;
 }
 
+/**Define top scroll padding for <a> href scroll to ID**/
+html {
+	scroll-padding-top: 100px;
+}
+
 h1 {
 	font-size: 3rem;
 	font-weight: 700;
@@ -204,6 +209,11 @@ footer {
 	.navbar-nav .nav-link:hover::after {
 		background-color: var(--grainall); /* Change to your desired hover color */
 	}
+}
+
+.custom-fill-btn:hover {
+	color: white;
+	background-color: #2a3dbf;
 }
 
 .custom-btn {
