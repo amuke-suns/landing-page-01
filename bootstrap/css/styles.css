@@ -188,7 +188,7 @@ footer {
 	background-color: var(--grainall); /* Change to your desired hover color */
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
 	.navbar-nav .nav-link {
 		position: relative;
 		padding-bottom: 10px; /* Adjust padding to create space for the border */
