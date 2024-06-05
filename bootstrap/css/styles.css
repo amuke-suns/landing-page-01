@@ -370,3 +370,71 @@ footer {
 	opacity: 1;
 	height: auto;
 }
+
+/* Ensure the iframe is centered horizontally and vertically within its parent */
+.doc-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Adjust the height as needed */
+}
+
+iframe {
+	max-width: 800px;
+	min-width: 576px;
+	width: 100%;
+	height: 100vh;
+	border: none;
+}
+
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 5px solid;
+	border-color: var(--grainall) transparent;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading {
+	/* Absolute position */
+	left: 0;
+	position: absolute;
+	top: 0;
+
+	/* Take full size */
+	height: 100%;
+	width: 100%;
+
+	/* Center */
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.clickable-span {
+	color: #171725;
+	text-decoration: none;
+}
+
+.clickable-span:hover {
+	color: var(--grainall);
+	cursor: pointer;
+}
+
+.unclickable-span {
+	color: var(--grainall);
+	text-decoration: none;
+}
