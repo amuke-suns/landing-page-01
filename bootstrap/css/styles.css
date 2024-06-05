@@ -229,6 +229,7 @@ footer {
 	font-weight: 500;
 	cursor: pointer;
 	transition: background-color 0.3s;
+	text-decoration: none;
 }
 
 .custom-btn .icon-container {
@@ -248,6 +249,7 @@ footer {
 
 .custom-btn:hover {
 	background-color: #2a3dbf;
+	color: white;
 }
 
 .dark-card {
