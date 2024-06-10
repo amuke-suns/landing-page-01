@@ -268,13 +268,13 @@ footer {
 .light-purple-card {
 	background-color: #f8f7ff;
 	border-radius: 24px;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .light-brown-card {
 	background-color: #eee9e2;
 	border-radius: 24px;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .dark-card img,
@@ -354,7 +354,7 @@ footer {
 }
 
 .pricing-section ol li {
-	border-bottom: 0.5px solid black;
+	/* border-bottom: 0.5px solid black; */
 	padding-bottom: 0.5rem;
 }
 
