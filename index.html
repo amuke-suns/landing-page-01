@@ -10,7 +10,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@100..700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -246,7 +246,7 @@
 		<section class="pricing-section" id="pricing">
 			<div class="container">
 				<h2 class="mb-5">Affordable pricing to <br /> <span class="color-grainall">fit the size of your businesss</span>.</h2>
-				<div class="row transition visible gy-4 gx-lg-0" id="monthlyPricing">
+				<div class="row transition visible gy-4" id="monthlyPricing">
 					<div class="col-md-6 col-lg-4 order-2 order-lg-1">
 						<div class="light-purple-card d-flex flex-column h-100">
 							<h4 class="color-grainall">Freemium</h4>
@@ -452,6 +452,86 @@
 			</a>
 		</section>
 
+		<!-- Floating Action Button -->
+		<div class="tooltip-container">
+			<div class="fab" id="fab">
+				<div class="tooltip-text">Contact Us</div>
+				<img class="p-2 w-100" src="img/chat-widget.svg" alt="Chat Widget" />
+			</div>
+		</div>
+		
+		  <!-- Chat Widget -->
+		<div class="chat-widget" id="chatWidget">
+			<div class="chat-widget-header">
+				Send us a message
+			</div>
+			<div class="chat-widget-body">
+				<p class="semibold">
+					Fintell support teams are always ready to answer your questions
+					and discuss how you use our products and platforms.
+					Send us a message, and we will get back to you as soon as possible
+				</p>
+				<form id="form" onsubmit="return false;">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						class="d-block w-100"
+						placeholder="Enter your name"
+					/>
+
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						class="d-block w-100"
+						placeholder="Enter your email"
+					/>
+
+					<label for="subject">Subject</label>
+					<input
+						type="text"
+						id="subject"
+						name="subject"
+						class="d-block w-100"
+						placeholder="Enter a subject for the message"
+					/>
+
+					<label for="businessName"
+						>Business name <sup class="optional-tag">(optional)</sup></label
+					>
+					<input
+						type="text"
+						id="businessName"
+						name="businessName"
+						class="d-block w-100"
+						placeholder="Enter your business name"
+					/>
+
+					<div class="textarea-container">
+						<label for="message">Message</label>
+						<textarea
+							id="message"
+							name="message"
+							rows="8"
+							class="mb-3 w-100"
+							placeholder="Enter your message..."
+						></textarea>
+						<div id="wordCount" class="word-count">0/200 words</div>
+					</div>
+
+					<button class="btn primary-btn w-100" id="sendMessageBtn">
+						Send message
+						<span
+							><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</form>
+			</div>
+		</div>
+
 		<footer>
 			<div class="container bg-white">
 				<div class="row d-flex align-items-center">
@@ -466,7 +546,8 @@
 						<div class="d-flex justify-content-center align-items-center">
 							<a href="#faq" class="clickable-span me-4">FAQ</a>
 							<a href="privacy.html" class="clickable-span me-4">Privacy Policy</a>
-							<a href="terms-of-use.html" class="clickable-span" role="span">Terms & Conditions</a>
+							<a href="terms-of-use.html" class="clickable-span me-4" role="span">Terms & Conditions</a>
+							<a href="contact-us.html" class="clickable-span" role="span">Contact Us</a>
 						</div>
 					</div>
 					<div class="col-lg-3 order-2 order-lg-3 mb-3 mb-lg-0">
@@ -500,6 +581,14 @@
 
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script>
+			document.querySelector("#sendMessageBtn").addEventListener("click", function (event) {
+				event.preventDefault()
+				const form = document.getElementById("form");
+				const formData = new FormData(form)
+				console.log(Object.fromEntries(formData));
+				form.reset()
+			});
+			
 			document.addEventListener('DOMContentLoaded', function() {
 				const options = document.querySelectorAll('.toggle-switch .option');
 				options.forEach(option => {
@@ -510,26 +599,6 @@
 				});
 			});
 
-			document.addEventListener('DOMContentLoaded', function() {
-				const div1 = document.getElementById('monthlyPricing');
-				const div2 = document.getElementById('annualPricing');
-				const showDiv1Button = document.getElementById('showMonthlyPricing');
-				const showDiv2Button = document.getElementById('showAnnualPricing');
-
-				showDiv1Button.addEventListener('click', function() {
-					div1.classList.remove('hidden');
-					div1.classList.add('visible');
-					div2.classList.remove('visible');
-					div2.classList.add('hidden');
-				});
-
-				showDiv2Button.addEventListener('click', function() {
-					// div2.classList.remove('hidden');
-					// div2.classList.add('visible');
-					// div1.classList.remove('visible');
-					// div1.classList.add('hidden');			
-				});
-			});
 	
 			document.querySelectorAll(".nav-link").forEach((link) => {
 				link.addEventListener("click", function () {
@@ -538,6 +607,39 @@
 						.forEach((nav) => nav.classList.remove("active"));
 					this.classList.add("active");
 				});
+			});
+
+			document.getElementById('fab').addEventListener('click', function() {
+				var chatWidget = document.getElementById('chatWidget');
+				if (chatWidget.style.display === 'none' || chatWidget.style.display === '') {
+					chatWidget.style.display = 'flex';
+				} else {
+					chatWidget.style.display = 'none';
+				}
+			});
+
+			document.addEventListener('click', function(event) {
+				var chatWidget = document.getElementById('chatWidget');
+				var fab = document.getElementById('fab');
+				if (!chatWidget.contains(event.target) && !fab.contains(event.target)) {
+					chatWidget.style.display = 'none';
+				}
+			});
+			
+			document.getElementById('message').addEventListener('input', function() {
+				let text = this.value;
+				let wordCount = text.trim().split(/\s+/).filter(function(word) {
+					return word.length > 0;
+				}).length;
+
+				if (wordCount > 200) {
+					// If word count exceeds 20, truncate the text to the first 200 words
+					var truncatedText = text.trim().split(/\s+/).slice(0, 200).join(' ');
+					this.value = truncatedText + ' ';
+					wordCount = 200;
+				}
+
+				document.getElementById('wordCount').textContent = wordCount + '/200 words';
 			});
 		</script>
 	</body>

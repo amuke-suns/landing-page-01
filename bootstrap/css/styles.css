@@ -1,8 +1,8 @@
 :root {
-	--primary: #3029d9;
+	--primary: #5555f7;
 	---primary-dark: #111849;
 	--white: #ffffff;
-	--grainall: #4244f5;
+	--grainall: #5555f7;
 	--grey: #f3f3f3;
 	--purple-light: #f8f7ff;
 }
@@ -92,6 +92,16 @@ h5 {
 	color: white;
 }
 
+.primary-btn {
+	background-color: var(--grainall);
+	color: white;
+	font-weight: 500;
+
+	&:hover {
+		color: white;
+	}
+}
+
 .border-color-primary-btn {
 	border-color: var(--primary);
 	color: var(--primary);
@@ -150,6 +160,10 @@ footer {
 			line-height: 3rem;
 		}
 	}
+}
+
+.semibold {
+	font-weight: 500;
 }
 
 .gradient {
@@ -439,4 +453,169 @@ iframe {
 .unclickable-span {
 	color: var(--grainall);
 	text-decoration: none;
+}
+
+form {
+	.optional-tag {
+		color: grey;
+		opacity: 0.5;
+		font-style: italic;
+	}
+
+	input,
+	textarea {
+		border: 0.5px solid grey;
+		border-radius: 8px;
+		padding: 8px;
+		margin-bottom: 16px;
+
+		&:focus {
+			box-shadow: none;
+			border: none;
+		}
+	}
+
+	textarea {
+		padding-bottom: 24px;
+	}
+}
+
+.textarea-container {
+	position: relative;
+}
+
+.word-count {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0px;
+	margin: 0px;
+	bottom: 24px;
+	right: 10px;
+	border-radius: 3px;
+	font-size: 12px;
+}
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px var(--primary) inset !important;
+	-webkit-text-fill-color: white;
+}
+
+::placeholder {
+	color: white;
+	opacity: 0.5; /* Firefox
+}
+
+::-ms-input-placeholder {
+	/* Edge 12 -18
+	color: white;
+	opacity: 0.5;
+} */
+
+.fab {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: var(--grainall);
+	color: white;
+	border-radius: 25%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	z-index: 999;
+}
+
+/* Tooltip text */
+.fab .tooltip-text {
+	visibility: hidden;
+	font-size: small;
+	font-weight: bold;
+	font-family: Poppins;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 110%; /* Position above the button */
+	left: 50%;
+	margin-left: -60px; /* Center the tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.fab .tooltip-text::after {
+	content: "";
+	position: absolute;
+	top: 100%; /* Arrow at the bottom of the tooltip */
+	right: 10%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+.fab:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.chat-widget {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 90%;
+	max-height: 600px;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: none;
+	flex-direction: column;
+	z-index: 1000;
+}
+
+/* Width for screens >= 800px */
+@media (min-width: 800px) {
+	.chat-widget {
+		width: 70%;
+	}
+}
+
+/* Width for screens >= 1000px */
+@media (min-width: 1000px) {
+	.chat-widget {
+		width: 60%;
+	}
+}
+
+/* Width for screens >= 1200px */
+@media (min-width: 1200px) {
+	.chat-widget {
+		width: 50%;
+	}
+}
+
+.chat-widget-header {
+	padding: 14px;
+	background-color: var(--grainall);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.chat-widget-body {
+	padding: 0px 32px 32px;
+	overflow-y: auto;
 }
