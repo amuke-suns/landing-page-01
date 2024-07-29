@@ -484,7 +484,7 @@ form {
 	position: relative;
 }
 
-.word-count {
+/* .word-count {
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 0px;
@@ -493,25 +493,6 @@ form {
 	right: 10px;
 	border-radius: 3px;
 	font-size: 12px;
-}
-
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-	-webkit-box-shadow: 0 0 0 30px var(--primary) inset !important;
-	-webkit-text-fill-color: white;
-}
-
-::placeholder {
-	color: white;
-	opacity: 0.5; /* Firefox
-}
-
-::-ms-input-placeholder {
-	/* Edge 12 -18
-	color: white;
-	opacity: 0.5;
 } */
 
 .fab {
@@ -574,7 +555,7 @@ input:-webkit-autofill:active {
 	bottom: 20px;
 	right: 20px;
 	width: 90%;
-	max-height: 600px;
+	max-height: 80%;
 	background-color: white;
 	border: 1px solid #ddd;
 	border-radius: 8px;
